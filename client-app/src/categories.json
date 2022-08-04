@@ -1,0 +1,34 @@
+[
+  {
+    "Name": "Food",
+    "Description": "Groceries/Baby Needs/Cosmetics/Personal Care"
+  },
+  { "Name": "Personal Care", "Description": "Cosmetics/Personal Care" },
+  { "Name": "Clothing", "Description": "Clothes" },
+  {
+    "Name": "Transportation",
+    "Description": "Bus/Taxi/Fuel/Insurance/Maintenance/Parking"
+  },
+  { "Name": "Housing", "Description": "Mortgage/Taxes/Rent/Insurance" },
+  {
+    "Name": "Utilities",
+    "Description": "Phone/Cell phone/Gas/Cable/Internet/Hydro"
+  },
+  {
+    "Name": "Medical",
+    "Description": "Health care premiums/Specialists/Over-the-counter"
+  },
+  {
+    "Name": "Education",
+    "Description": "School/Courses/Training/College/University"
+  },
+  {
+    "Name": "Entertainment",
+    "Description": "Gaming/Cinema/Attractions/Museums/Restaurants/Cafe"
+  },
+  {
+    "Name": "Subscriptions",
+    "Description": "Netflix/Disney Plus/Amazon Prime/Youtube Premium/Gaming Subscriptions/etc"
+  },
+  { "Name": "Other", "Description": "Uncategorized" }
+]
