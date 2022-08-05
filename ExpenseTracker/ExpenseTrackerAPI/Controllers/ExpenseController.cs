@@ -27,31 +27,6 @@ namespace ExpenseTrackerAPI.Controllers
                 .Include(x => x.Category)
                 .Where(expense => expense.Date > queryParams.FromDate && expense.Date < queryParams.ToDate);
 
-            if (queryParams.WholeTime)
-            {
-
-            } else if (queryParams.WholeYear)
-            {
-                expensesQuery = expensesQuery
-                    .Where(expense => expense.Date.Year == queryParams.Year);
-            }
-            else
-            {
-                expensesQuery = expensesQuery
-                    .Where(x => x.Date >= DateTime.Now.AddMonths(-queryParams.LastMonth));
-            }
-            //year
-            
-            expensesQuery = expensesQuery
-                    .Where(expense => expense.Date.Year == queryParams.Year);
-
-            //month number
-            if (queryParams.Month >= 1 && queryParams.Month <= 12)
-            {
-                expensesQuery = expensesQuery
-                    .Where(expense => expense.Date.Month == queryParams.Month);
-            }
-
             if (queryParams.Category != null)
             {
                 expensesQuery = expensesQuery

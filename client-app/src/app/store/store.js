@@ -8,3 +8,6 @@ const store = configureStore({
         expenseReducer: expenseSlice.reducer
     }
 })
+
+
+export default store;
