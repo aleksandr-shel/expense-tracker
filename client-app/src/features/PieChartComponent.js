@@ -1,16 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {PieChart, Pie, Cell} from 'recharts';
 import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
-
-
-//documentation https://recharts.org/en-US/api 
-// const data = [
-// 	{ name: 'Group A', value: 400 },
-// 	{ name: 'Group B', value: 300 },
-// 	{ name: 'Group C', value: 300 },
-// 	{ name: 'Group D', value: 200 },
-// ];
 
 const COLORS = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6', 
 '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
@@ -33,54 +23,23 @@ const renderCustomizedLabel = ({
 
 	return (
         <>
-		<text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+		<text x={x} y={y} fill="black" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
 			{`${(percent * 100).toFixed(0)}%`}
 		</text>
-            <text x={x} y={y} fill='white' dy={20} textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">{`${payload.name}`}</text>
+            <text x={x} y={y} fill='black' dy={20} textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">{`${payload.name}`}</text>
         </>
 	);
 };
 
-const groupExpenses = (expenses) => {
-
-    //expenses = expenses.map((ex)=>({name: ex.category.name, value: new Number(ex.amount)}))
-
-    //categories expenses
-    return Object.entries(
-        expenses.reduce((exs, ex)=>{
-            const category = ex.category.name;
-            exs[category] = exs[category] ? [...exs[category], ex] : [ex]; 
-            return exs;
-        }, {})
-    );
-}
 
 export default function PieChartComponent(){
 
-    const {expenses} = useSelector(state=>state.expenseReducer);
-    const [data, setData] = useState([]);
-
-    let expensesCategorized = [];
-
-    useEffect(()=>{
-
-        if (expenses.length > 0  && data.length === 0){
-            expensesCategorized = groupExpenses(expenses);
-            expensesCategorized.forEach((categorizedExpense)=>{
-                setData(data=>{
-                    let newArr = [...data]
-                    newArr.push({name:categorizedExpense[0], value: categorizedExpense[1].map(item => item.amount).reduce((prev,next)=> prev+next)})
-                    //categorizedExpense[1].map(item => item.amount).reduce((prev,next)=> prev+next) //count the sum of the amount of expense category
-                    return newArr;
-                })
-            })
-        }
-    },[expenses.length, expenses])
+    const {expensesForPieChart} = useSelector(state=>state.expenseReducer);
 
     return (
         <PieChart width={500} height={500}>
             <Pie
-                data={data}
+                data={expensesForPieChart}
                 labelLine={false}
                 label={renderCustomizedLabel}
                 outerRadius={250}
@@ -89,7 +48,7 @@ export default function PieChartComponent(){
                 isAnimationActive={true}
             >
                 {
-                data.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
+                expensesForPieChart.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
                 }
             </Pie>
         </PieChart>

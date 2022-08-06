@@ -1,35 +1,88 @@
-import { Box, Button, Input, Select, MenuItem, InputLabel, InputBase} from '@mui/material';
-import React from 'react';
+import {Button, Input, Select, MenuItem, InputLabel, Stack, FormControl, TextField} from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { addExpenseAction } from '../app/store/actions/expenseActions';
 import categories from '../categories.json'
 
 export default function AddExpenseForm(){
 
-    function handleChangeCategory(){
+    const [expenseName, setExpenseName] = useState('');
+    const [expenseNameError, setExpenseNameError]=useState(false);
+    const [amount, setAmount] = useState(1);
+    const [date, setDate] = useState(()=>{
+        let date = new Date()
+        const offset = date.getTimezoneOffset()
+        date = new Date(date.getTime() - (offset * 60 * 1000))
+        return date.toISOString().split('T')[0]
+    });
+    const [categoryName, setCategoryName] = useState('');
+    const [categoryNameError, setCategoryNameError] = useState(false);
+    const dispatch = useDispatch();
 
+    useEffect(()=>{
+        //empty error handling
+        setTimeout(()=>{
+            setCategoryNameError(false);
+            setExpenseNameError(false);
+        },3500)
+    },[categoryNameError, expenseNameError])
+
+    function handleAddButtonClick(){
+        // console.log({expenseName, amount, date, categoryName})
+        if (categoryName !=='' && expenseName !==''){
+            dispatch(addExpenseAction({expenseName, amount, date, categoryName}))
+        } else {
+            if (categoryName === ''){
+                setCategoryNameError(true);
+            }
+            if (expenseName === ''){
+                setExpenseNameError(true);
+            }
+        }
     }
 
     return(
-        <Box sx={{margin: '1em'}}>
-            <Input placeholder='Expense' type='text'/>
-            <InputLabel id="demo-simple-select-label">Category</InputLabel>
-            <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                label="Category"
-                onChange={handleChangeCategory}
-            >
-                {categories.map((category,index)=>{
-                    return(
-                        <MenuItem key={index} value={category.Name}>
-                            {category.Name}
-                        </MenuItem>
-                    )
-                })}
-            </Select>
-            <Input type='date'/>
-            <Button variant="outlined">
+        <Stack direction='row' spacing={1} sx={{marginBottom:'1em'}}>
+            <TextField type='text'  label="Description"
+                value={expenseName}
+                error={expenseNameError}
+                onChange={(e)=>setExpenseName(e.target.value)}/>
+            <TextField
+                type='number'
+                value={amount}
+                label='Amount'
+                InputProps={{inputProps:{min:1}}}
+                onChange={(e)=>{
+                    e.target.value = e.target.value < 0 ? (e.target.value = 0) : e.target.value
+                    setAmount(e.target.value)
+                }}
+            />
+            <FormControl style={{width:'10em'}}>
+                <InputLabel id="category-select-label">Category</InputLabel>
+                <Select
+                    labelId="category-select-label"
+                    id="demo-simple-select"
+                    label="Category"
+                    value={categoryName}
+                    onChange={(e)=>setCategoryName(e.target.value)}
+                    error={categoryNameError}
+                >
+                    {categories.map((category,index)=>{
+                        return(
+                            <MenuItem key={index} value={category.Name}>
+                                {category.Name}
+                            </MenuItem>
+                        )
+                    })}
+                </Select>
+            </FormControl>
+            <Input type='date'
+                value={date}
+                onChange={(e)=>setDate(e.target.value)}
+            />
+            <Button variant="outlined" onClick={handleAddButtonClick}>
                 Add
             </Button>
-        </Box>
+        </Stack>
     )
 }

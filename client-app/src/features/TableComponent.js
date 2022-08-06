@@ -44,7 +44,7 @@ export default function TableComponent(){
                         </TableCell>
                         <TableCell align='center'>{expense.category.name}</TableCell>
                         <TableCell align='center'>{expense.amount}</TableCell>
-                        <TableCell align='center'>{expense.date}</TableCell>
+                        <TableCell align='center'>{expense.date.split('T')[0]}</TableCell>
                     </TableRow>
                 ))}
                 </TableBody>
