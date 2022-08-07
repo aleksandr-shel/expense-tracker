@@ -1,5 +1,5 @@
 
-import { setExpenses, setLoading,addExpense, setExpensesForPieChart, deleteExpense} from '../slices/expenseSlice';
+import { setExpenses, setLoading,addExpense, setExpensesForPieChart, deleteExpense, updateExpense} from '../slices/expenseSlice';
 import agent from './../../api/agent';
 
 
@@ -30,6 +30,15 @@ export function deleteExpenseAction(id){
     return async (dispatch)=>{
         agent.Expense.delete(id).then(()=>{
             dispatch(deleteExpense(id))
+            dispatch(setExpensesForPieChart())
+        })
+    }
+}
+
+export function updateExpenseAction(id, expense){
+    return async(dispatch)=>{
+        agent.Expense.update(id, expense).then((expense)=>{
+            dispatch(updateExpense(expense))
             dispatch(setExpensesForPieChart())
         })
     }

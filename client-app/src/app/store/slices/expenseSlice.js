@@ -45,10 +45,16 @@ const expenseSlice = createSlice({
             expensesCategorized.forEach((categorizedExpense)=>{
                 state.expensesForPieChart.push({name:categorizedExpense[0], value: categorizedExpense[1].map(item => item.amount).reduce((prev,next)=> prev+next)})
             })
+        },
+        updateExpense: (state,action)=>{
+            const {id} = action.payload;
+            state.expenses = state.expenses.map(ex=>{
+                return ex.id === id ? action.payload : ex;
+            })
         }
     }
 })
 
-export const {setExpenses, setLoading, addExpense, setExpensesForPieChart, deleteExpense} = expenseSlice.actions
+export const {updateExpense, setExpenses, setLoading, addExpense, setExpensesForPieChart, deleteExpense} = expenseSlice.actions
 
 export default expenseSlice;
