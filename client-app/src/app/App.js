@@ -11,7 +11,6 @@ function App() {
         </Box>
         <Box sx={{flex:'2', margin:'1em'}}>
           <AddExpenseForm/>
-          {/* <TableComponent/> */}
           <ListExpenses/>
         </Box>
     </Box>

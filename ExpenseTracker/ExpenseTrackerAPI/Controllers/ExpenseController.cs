@@ -27,7 +27,7 @@ namespace ExpenseTrackerAPI.Controllers
                 .Include(x => x.Category)
                 .Where(expense => expense.Date > queryParams.FromDate && expense.Date < queryParams.ToDate);
 
-            if (queryParams.Category != null)
+            if (!string.IsNullOrEmpty(queryParams.Category))
             {
                 expensesQuery = expensesQuery
                     .Where(x => x.Category.Name == queryParams.Category);

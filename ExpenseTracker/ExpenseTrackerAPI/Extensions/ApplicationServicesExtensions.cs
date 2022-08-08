@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using ExpenseTrackerAPI.Core;
 using ExpenseTrackerAPI.Models.Data;
+using ExpenseTrackerAPI.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace ExpenseTrackerAPI.Extensions

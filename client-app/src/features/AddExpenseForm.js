@@ -42,47 +42,50 @@ export default function AddExpenseForm(){
     }
 
     return(
-        <Stack direction='row' spacing={1} sx={{marginBottom:'1em'}}>
-            <TextField type='text'  label="Description"
-                value={expenseName}
-                error={expenseNameError}
-                onChange={(e)=>setExpenseName(e.target.value)}/>
-            <TextField
-                type='number'
-                value={amount}
-                label='Amount'
-                InputProps={{inputProps:{min:1}}}
-                onChange={(e)=>{
-                    e.target.value = e.target.value < 0 ? (e.target.value = 0) : e.target.value
-                    setAmount(e.target.value)
-                }}
-            />
-            <FormControl style={{width:'10em'}}>
-                <InputLabel id="category-select-label">Category</InputLabel>
-                <Select
-                    labelId="category-select-label"
-                    id="demo-simple-select"
-                    label="Category"
-                    value={categoryName}
-                    onChange={(e)=>setCategoryName(e.target.value)}
-                    error={categoryNameError}
-                >
-                    {categories.map((category,index)=>{
-                        return(
-                            <MenuItem key={index} value={category.Name}>
-                                {category.Name}
-                            </MenuItem>
-                        )
-                    })}
-                </Select>
-            </FormControl>
-            <Input type='date'
-                value={date}
-                onChange={(e)=>setDate(e.target.value)}
-            />
-            <Button variant="outlined" onClick={handleAddButtonClick}>
-                Add
-            </Button>
-        </Stack>
+        <>
+            <h5>Add Expense</h5>
+            <Stack direction='row' spacing={1} sx={{marginBottom:'1em'}}>
+                <TextField type='text'  label="Description"
+                    value={expenseName}
+                    error={expenseNameError}
+                    onChange={(e)=>setExpenseName(e.target.value)}/>
+                <TextField
+                    type='number'
+                    value={amount}
+                    label='Amount'
+                    InputProps={{inputProps:{min:1}}}
+                    onChange={(e)=>{
+                        e.target.value = e.target.value < 0 ? (e.target.value = 0) : e.target.value
+                        setAmount(e.target.value)
+                    }}
+                />
+                <FormControl style={{width:'10em'}}>
+                    <InputLabel id="category-select-label">Category</InputLabel>
+                    <Select
+                        labelId="category-select-label"
+                        id="demo-simple-select"
+                        label="Category"
+                        value={categoryName}
+                        onChange={(e)=>setCategoryName(e.target.value)}
+                        error={categoryNameError}
+                    >
+                        {categories.map((category,index)=>{
+                            return(
+                                <MenuItem key={index} value={category.Name}>
+                                    {category.Name}
+                                </MenuItem>
+                            )
+                        })}
+                    </Select>
+                </FormControl>
+                <Input type='date'
+                    value={date}
+                    onChange={(e)=>setDate(e.target.value)}
+                />
+                <Button variant="outlined" onClick={handleAddButtonClick}>
+                    Add
+                </Button>
+            </Stack>
+        </>
     )
 }

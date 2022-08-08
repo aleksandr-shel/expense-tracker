@@ -51,7 +51,7 @@ const User = {
 }
 
 const Expense = {
-    list: () => axios.get('/api/expense').then(responseBody),
+    list: (params) => axios.get('/api/expense',{params}).then(responseBody),
     delete: (id)=>requests.delete(`/api/expense/${id}`),
     add:(body)=>requests.post('/api/expense', body),
     update:(id, body)=> requests.put(`/api/expense/${id}`, body)

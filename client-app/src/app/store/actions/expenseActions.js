@@ -3,10 +3,10 @@ import { setExpenses, setLoading,addExpense, setExpensesForPieChart, deleteExpen
 import agent from './../../api/agent';
 
 
-export function fetchExpenses(){
+export function fetchExpenses(params){
     return async (dispatch)=>{
         dispatch(setLoading(true))
-        const expenses = await agent.Expense.list()
+        const expenses = await agent.Expense.list(params)
         dispatch(setExpenses(expenses))
         dispatch(setExpensesForPieChart())
         dispatch(setLoading(false))
