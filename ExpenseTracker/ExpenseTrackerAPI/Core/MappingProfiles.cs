@@ -13,6 +13,8 @@ namespace ExpenseTrackerAPI.Core
                 .ForMember(x => x.Name, d => d.MapFrom(s => s.ExpenseName));
 
 
+            CreateMap<Expense, GetExpenseDto>();
+
         }
     }
 }

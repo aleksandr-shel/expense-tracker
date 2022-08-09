@@ -1,9 +1,12 @@
-﻿using ExpenseTrackerAPI.Core;
+﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
+using ExpenseTrackerAPI.Core;
 using ExpenseTrackerAPI.DTOs;
 using ExpenseTrackerAPI.Models;
 using ExpenseTrackerAPI.Models.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace ExpenseTrackerAPI.Controllers
 {
@@ -13,11 +16,13 @@ namespace ExpenseTrackerAPI.Controllers
     {
         private readonly DataContext _context;
         private readonly ILogger<ExpenseController> _logger;
+        private readonly IMapper _mapper;
 
-        public ExpenseController(DataContext context, ILogger<ExpenseController> logger)
+        public ExpenseController(DataContext context, ILogger<ExpenseController> logger, IMapper mapper)
         {
             _context = context;
             _logger = logger;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -25,7 +30,10 @@ namespace ExpenseTrackerAPI.Controllers
         {
             var expensesQuery = _context.Expenses
                 .Include(x => x.Category)
-                .Where(expense => expense.Date > queryParams.FromDate && expense.Date < queryParams.ToDate);
+                .Include(x => x.User)
+                .Where(x => x.User.Email == User.FindFirstValue(ClaimTypes.Email))
+                .Where(expense => expense.Date > queryParams.FromDate && expense.Date < queryParams.ToDate)
+                .ProjectTo<GetExpenseDto>(_mapper.ConfigurationProvider);
 
             if (!string.IsNullOrEmpty(queryParams.Category))
             {
@@ -43,12 +51,13 @@ namespace ExpenseTrackerAPI.Controllers
             try
             {
                 var categories = await _context.Categories.ToListAsync();
-                var newExpense = HandleAddExpenseDto(addExpenseDto,categories);
+                var newExpense = await HandleAddExpenseDto(addExpenseDto,categories);
                 var value = await _context.Expenses.AddAsync(newExpense);
+                var expenseDto = _mapper.Map<GetExpenseDto>(value.Entity);
                 var result = await _context.SaveChangesAsync() > 0;
                 if (result)
                 {
-                    return Ok(value.Entity);
+                    return Ok(expenseDto);
                 }
                 return BadRequest("Fail to add new expense");
             }
@@ -63,6 +72,8 @@ namespace ExpenseTrackerAPI.Controllers
         {
             var expense = await _context.Expenses
                 .Include(x => x.Category)
+                .Include(x => x.User)
+                .Where(x => x.User.Email == User.FindFirstValue(ClaimTypes.Email))
                 .FirstOrDefaultAsync(x => x.Id == id);
 
             if (expense == null) return BadRequest("Expense not found");
@@ -78,10 +89,12 @@ namespace ExpenseTrackerAPI.Controllers
             expense.Date = updateExpenseDto.Date;
             expense.Name = updateExpenseDto.ExpenseName;
 
+            var updatedExpense = _mapper.Map<GetExpenseDto>(expense);
+
             var result = await _context.SaveChangesAsync() > 0;
             if (result)
             {
-                return Ok(expense);
+                return Ok(updatedExpense);
             }
 
             return BadRequest("Error updating expense");
@@ -90,7 +103,10 @@ namespace ExpenseTrackerAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteExpense(Guid id)
         {
-            var expense = await _context.Expenses.FindAsync(id);
+            var expense = await _context.Expenses
+                .Include(x => x.User)
+                .Where(x => x.User.Email == User.FindFirstValue(ClaimTypes.Email))
+                .FirstOrDefaultAsync(x => x.Id == id);
 
             if (expense == null)
             {
@@ -113,9 +129,9 @@ namespace ExpenseTrackerAPI.Controllers
         {
             List<Expense> expenses = new List<Expense>();
             var categories = await _context.Categories.ToListAsync();
-            expenseDtos.ForEach(x =>
+            expenseDtos.ForEach(async x =>
             {
-                var expense = HandleAddExpenseDto(x, categories);
+                var expense = await HandleAddExpenseDto(x, categories);
                 expenses.Add(expense);
             });
 
@@ -135,9 +151,11 @@ namespace ExpenseTrackerAPI.Controllers
             return Ok();
         }
 
-        private Expense HandleAddExpenseDto(ExpenseDto expenseDto, List<Category> categories)
+        private async Task<Expense> HandleAddExpenseDto(ExpenseDto expenseDto, List<Category> categories)
         {
             var category = categories.Find(x => x.Name.Equals(expenseDto.CategoryName));
+
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.Email == User.FindFirstValue(ClaimTypes.Email));
 
             if (category == null) throw new Exception("Provided category was not found");
 
@@ -146,6 +164,7 @@ namespace ExpenseTrackerAPI.Controllers
                 Name = expenseDto.ExpenseName,
                 Amount = expenseDto.Amount,
                 Date = expenseDto.Date,
+                User = user
             };
             newExpense.Category = category;
             return newExpense;
