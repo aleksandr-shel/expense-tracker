@@ -75,7 +75,6 @@ C:\Web Development Projects\Expense Tracker\ExpenseTracker\ExpenseTrackerAPI\bin
 C:\Web Development Projects\Expense Tracker\ExpenseTracker\ExpenseTrackerAPI\bin\Debug\net6.0\NWebsec.AspNetCore.Core.dll
 C:\Web Development Projects\Expense Tracker\ExpenseTracker\ExpenseTrackerAPI\bin\Debug\net6.0\NWebsec.AspNetCore.Middleware.dll
 C:\Web Development Projects\expense-tracker\ExpenseTracker\ExpenseTrackerAPI\bin\Debug\net6.0\appsettings.Development.json
-C:\Web Development Projects\expense-tracker\ExpenseTracker\ExpenseTrackerAPI\bin\Debug\net6.0\ExpenseTrackerAPI.staticwebassets.runtime.json
 C:\Web Development Projects\expense-tracker\ExpenseTracker\ExpenseTrackerAPI\bin\Debug\net6.0\ExpenseTrackerAPI.exe
 C:\Web Development Projects\expense-tracker\ExpenseTracker\ExpenseTrackerAPI\bin\Debug\net6.0\ExpenseTrackerAPI.deps.json
 C:\Web Development Projects\expense-tracker\ExpenseTracker\ExpenseTrackerAPI\bin\Debug\net6.0\ExpenseTrackerAPI.runtimeconfig.json

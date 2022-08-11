@@ -2,7 +2,7 @@ import axios from "axios";
 import store from '../store/store'
 import { toast } from 'react-toastify';
 
-axios.defaults.baseURL = 'https://localhost:5001'
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 axios.interceptors.request.use(config=>{
     const token = store.getState().usersReducer.token;
