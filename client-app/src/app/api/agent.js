@@ -45,16 +45,16 @@ const requests = {
 
 
 const User = {
-    login: (user)=> requests.post('/api/account/login', user),
-    register: (user)=> requests.post('/api/account/register', user),
-    getCurrent: ()=> requests.get('/api/account/current')
+    login: (user)=> requests.post('/account/login', user),
+    register: (user)=> requests.post('/account/register', user),
+    getCurrent: ()=> requests.get('/account/current')
 }
 
 const Expense = {
-    list: (params) => axios.get('/api/expense',{params}).then(responseBody),
-    delete: (id)=>requests.delete(`/api/expense/${id}`),
-    add:(body)=>requests.post('/api/expense', body),
-    update:(id, body)=> requests.put(`/api/expense/${id}`, body)
+    list: (params) => axios.get('/expense',{params}).then(responseBody),
+    delete: (id)=>requests.delete(`/expense/${id}`),
+    add:(body)=>requests.post('/expense', body),
+    update:(id, body)=> requests.put(`/expense/${id}`, body)
 }
 
 
