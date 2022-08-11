@@ -10,7 +10,10 @@ const store = configureStore({
         expenseReducer: expenseSlice.reducer,
         usersReducer: userSlice.reducer,
         modalReducer: modalSlice.reducer,
-    }
+    },
+    middleware: (getDefaultMiddleware)=> getDefaultMiddleware({
+        serializableCheck: false
+    })
 })
 
 

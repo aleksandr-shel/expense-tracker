@@ -69,3 +69,8 @@ C:\Web Development Projects\Expense Tracker\ExpenseTracker\ExpenseTrackerAPI\obj
 C:\Web Development Projects\Expense Tracker\ExpenseTracker\ExpenseTrackerAPI\obj\Debug\net6.0\ExpenseTrackerAPI.pdb
 C:\Web Development Projects\Expense Tracker\ExpenseTracker\ExpenseTrackerAPI\obj\Debug\net6.0\ExpenseTrackerAPI.genruntimeconfig.cache
 C:\Web Development Projects\Expense Tracker\ExpenseTracker\ExpenseTrackerAPI\obj\Debug\net6.0\ref\ExpenseTrackerAPI.dll
+C:\Web Development Projects\Expense Tracker\ExpenseTracker\ExpenseTrackerAPI\bin\Debug\net6.0\ExpenseTrackerAPI.staticwebassets.runtime.json
+C:\Web Development Projects\Expense Tracker\ExpenseTracker\ExpenseTrackerAPI\bin\Debug\net6.0\Npgsql.dll
+C:\Web Development Projects\Expense Tracker\ExpenseTracker\ExpenseTrackerAPI\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Web Development Projects\Expense Tracker\ExpenseTracker\ExpenseTrackerAPI\bin\Debug\net6.0\NWebsec.AspNetCore.Core.dll
+C:\Web Development Projects\Expense Tracker\ExpenseTracker\ExpenseTrackerAPI\bin\Debug\net6.0\NWebsec.AspNetCore.Middleware.dll

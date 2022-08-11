@@ -1,15 +1,26 @@
-import React from 'react';
-import PieChartComponent from '../features/PieChartComponent';
-import Box from '@mui/material/Box';
-import AddExpenseForm from '../features/AddExpenseForm';
-import ListExpenses from '../features/ListExpenses';
+import React, { useEffect } from 'react';
 import {Routes, Route} from 'react-router-dom';
 import HomePage from '../features/HomePage';
 import {Link} from 'react-router-dom'
 import ProtectedRoute from '../features/ProtectedRoute';
 import ModalComponent from '../features/ModalComponent';
+import { useDispatch } from 'react-redux';
+import { setToken } from './store/slices/userSlice';
+import { currentUser } from './store/actions/userActions';
+import ExpensesDashboard from '../features/ExpensesDashboard';
 
 function App() {
+
+  const dispatch = useDispatch();
+  
+  useEffect(()=>{
+    const tokenHere = window.localStorage.getItem('expense-tracker-token')
+    if (tokenHere){
+      dispatch(setToken(tokenHere))
+      dispatch(currentUser())
+    }
+  },[dispatch])
+
   return (
     <>
       <ModalComponent/>
@@ -17,15 +28,7 @@ function App() {
         <Route exact path='/' element={<HomePage/>} />
         <Route path='/expense-tracker' element={
           <ProtectedRoute>
-            <Box sx={{display:'flex', flexWrap:'wrap',marginRight: '5em', marginLeft:'5em'}}>
-                <Box sx={{display:'flex',justifyContent:'center', flex:'1', margin:'1em'}}>
-                  <PieChartComponent/>
-                </Box>
-                <Box sx={{flex:'2', margin:'1em'}}>
-                  <AddExpenseForm/>
-                  <ListExpenses/>
-                </Box>
-            </Box>
+            <ExpensesDashboard/>
           </ProtectedRoute>
         }/>
         <Route path="*" element=

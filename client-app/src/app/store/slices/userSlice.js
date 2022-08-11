@@ -12,22 +12,27 @@ const userSlice = createSlice({
     reducers:{
         setToken: (state, {payload})=>{
             state.token = payload;
-            window.localStorage.setItem('token', payload);
+            window.localStorage.setItem('expense-tracker-token', payload);
         },
         removeToken: (state)=>{
             state.token = null;
-            window.localStorage.removeItem('token');
+            window.localStorage.removeItem('expense-tracker-token');
         },
         setUser: (state, {payload})=>{
             state.user = payload;
         },
         setLoading:(state, {payload})=>{
             state.loading = payload;
+        },
+        logout:(state)=>{
+            state.token = null;
+            state.user = null;
+            window.localStorage.removeItem('expense-tracker-token')
         }
     }
 })
 
 
-export const {setToken, removeToken, setUser, setLoading} = userSlice.actions;
+export const {setToken, removeToken, setUser, setLoading, logout} = userSlice.actions;
 
 export default userSlice;

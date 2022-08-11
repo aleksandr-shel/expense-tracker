@@ -42,7 +42,7 @@ export default function AddExpenseForm(){
     }
 
     return(
-        <>
+        <div className='appear-animation-scale'>
             <h5>Add Expense</h5>
             <Stack direction='row' spacing={1} sx={{marginBottom:'1em'}}>
                 <TextField type='text'  label="Description"
@@ -86,6 +86,6 @@ export default function AddExpenseForm(){
                     Add
                 </Button>
             </Stack>
-        </>
+        </div>
     )
 }

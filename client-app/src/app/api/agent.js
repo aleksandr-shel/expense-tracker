@@ -1,14 +1,14 @@
 import axios from "axios";
-// import store from "../store/store";
+import store from '../store/store'
 import { toast } from 'react-toastify';
 
 axios.defaults.baseURL = 'https://localhost:5001'
 
-// axios.interceptors.request.use(config=>{
-//     const token = store.getState().users.token;
-//     if (token) config.headers.Authorization = `Bearer ${token}`
-//     return config;
-// })
+axios.interceptors.request.use(config=>{
+    const token = store.getState().usersReducer.token;
+    if (token) config.headers.Authorization = `Bearer ${token}`
+    return config;
+})
 
 axios.interceptors.response.use( async response=>{
     return response;
@@ -45,9 +45,9 @@ const requests = {
 
 
 const User = {
-    login: (user)=> requests.post('/api/users/login', user),
-    register: (user)=> requests.post('/api/users/register', user),
-    getCurrent: ()=> requests.get('/api/users/current')
+    login: (user)=> requests.post('/api/account/login', user),
+    register: (user)=> requests.post('/api/account/register', user),
+    getCurrent: ()=> requests.get('/api/account/current')
 }
 
 const Expense = {

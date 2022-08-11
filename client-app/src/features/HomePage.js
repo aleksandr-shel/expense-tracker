@@ -30,6 +30,7 @@ export default function HomePage(){
                     <h1 style={{color:'white'}}>
                         Expense Tracker
                     </h1>
+                    <p style={{color:'white', textAlign:'center'}}>Keep track of your expenses</p>
                     {
                         user === null ?
                         <Stack direction='row' spacing={'auto'}>
@@ -47,11 +48,6 @@ export default function HomePage(){
                             </Button>
                         </Stack>
                     }
-                    <Stack sx={{marginTop:"1em"}}>
-                        <Button component={Link} to='expense-tracker' variant='outlined'>
-                            GO TO TRACKER
-                        </Button>
-                    </Stack>
                 </div>
             </Box>
         </ThemeProvider>
