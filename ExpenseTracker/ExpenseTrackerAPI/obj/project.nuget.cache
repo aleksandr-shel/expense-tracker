@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3GvMM0aHd7iGtuaMizI6mKLxoJP5iHP5OwcdtBgwVWZ9X8jBIkMs3EUs74kiq2gg8Dhr7G+X7JJcaMZkLf00Ug==",
+  "dgSpecHash": "JUWzl7obvVjegs0SEWdGWE+tnQIcrIuw8oJ21P36QkX5UFnpcNeI8d5OH83wTC/ZjtI7TCm6dsAyaNrniC0PBQ==",
   "success": true,
-  "projectFilePath": "C:\\Web Development Projects\\Expense Tracker\\ExpenseTracker\\ExpenseTrackerAPI\\ExpenseTrackerAPI.csproj",
+  "projectFilePath": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\ExpenseTrackerAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\msi123\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\msi123\\.nuget\\packages\\fluentvalidation\\11.1.0\\fluentvalidation.11.1.0.nupkg.sha512",

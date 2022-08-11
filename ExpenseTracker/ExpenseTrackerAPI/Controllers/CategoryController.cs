@@ -1,4 +1,5 @@
 ﻿using ExpenseTrackerAPI.Models.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -21,6 +22,13 @@ namespace ExpenseTrackerAPI.Controllers
         {
             var categories = await _context.Categories.ToListAsync();
             return Ok(categories);
+        }
+
+        [HttpGet("test")]
+        [AllowAnonymous]
+        public IActionResult GetString()
+        {
+            return Ok("hi");
         }
     }
 }

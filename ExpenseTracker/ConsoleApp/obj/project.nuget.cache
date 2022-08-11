@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VuC3qj1wB+qbxX2BqY7XppbFfmzeMVNsTskW58+VsnjKbM0onykGQLaGH2B0fpPnhOrVKIxB4h2kII4NJgMc+A==",
+  "dgSpecHash": "xD5b3ruo6IYv5BQSa21R+2CWQ9A/Js8ah+lRMrce99XlwCB1lklPDaKhi39IJvGPV1l1/MVx11kM6mchBsV29g==",
   "success": true,
-  "projectFilePath": "C:\\Web Development Projects\\Expense Tracker\\ExpenseTracker\\ConsoleApp\\ConsoleApp.csproj",
+  "projectFilePath": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ConsoleApp\\ConsoleApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
