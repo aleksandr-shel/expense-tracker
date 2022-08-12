@@ -6,11 +6,14 @@ import FilterExpenses from "./FilterExpenses";
 
 
 export default function ListExpenses(){
-    const {expenses} = useSelector(state => state.expenseReducer)
+    const {expenses, sum} = useSelector(state => state.expenseReducer)
 
     return(
         <div className="appear-animation-top-bottom">
             <FilterExpenses/>
+            <div>
+                Expense summary: $ {sum}
+            </div>
             <List>
                 {expenses.map((expense, index)=>{
                     return(

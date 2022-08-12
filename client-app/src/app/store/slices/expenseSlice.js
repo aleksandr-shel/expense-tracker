@@ -3,7 +3,8 @@ import {createSlice} from "@reduxjs/toolkit";
 const initialState= {
     expenses: [],
     loading: false,
-    expensesForPieChart: []
+    expensesForPieChart: [],
+    sum: 0,
 }
 
 const groupExpenses = (expenses) => {
@@ -27,16 +28,20 @@ const expenseSlice = createSlice({
     reducers:{
         setExpenses: (state, action)=>{
             state.expenses = action.payload;
+
+            state.sum = state.expenses.map(x => x.amount).reduce((prev,next)=> prev+next)
         },
         setLoading: (state, action)=>{
             state.loading = action.payload;
         },
         addExpense: (state, action)=>{
             state.expenses.push(action.payload)
+            state.sum = state.expenses.map(x => x.amount).reduce((prev,next)=> prev+next)
         },
         deleteExpense:(state, action)=>{
             const id = action.payload;
             state.expenses = state.expenses.filter(ex => ex.id !== id);
+            state.sum = state.expenses.map(x => x.amount).reduce((prev,next)=> prev+next)
         },
         setExpensesForPieChart:(state,action)=>{
             // const tempExpenses = action.payload;
@@ -51,6 +56,7 @@ const expenseSlice = createSlice({
             state.expenses = state.expenses.map(ex=>{
                 return ex.id === id ? action.payload : ex;
             })
+            state.sum = state.expenses.map(x => x.amount).reduce((prev,next)=> prev+next)
         }
     }
 })
