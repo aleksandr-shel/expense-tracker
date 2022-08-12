@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NhMGYfNQbp0WylRmfw9n4BbeXmIZFgP3PrzROKwzFLA=",
+  "Hash": "6HQclv6jlur++bvBPH4fCU21mmwExNmoCnDL6PvsXsc=",
   "Source": "ExpenseTrackerAPI",
   "BasePath": "_content/ExpenseTrackerAPI",
   "Mode": "Default",
@@ -119,12 +119,12 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\Entertainment.jpg"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\food.jpg",
+      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Food.jpg",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
-      "RelativePath": "images/categories/food.jpg",
+      "RelativePath": "images/categories/Food.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,7 +133,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\categories\\food.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\categories\\Food.jpg"
     },
     {
       "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Housing.jpg",
@@ -374,12 +374,12 @@
       "OriginalItemSpec": "wwwroot\\static\\css\\main.e02fa209.css.map"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\js\\main.0c6cdd15.js",
+      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\js\\main.42b953a5.js",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
-      "RelativePath": "static/js/main.0c6cdd15.js",
+      "RelativePath": "static/js/main.42b953a5.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -388,15 +388,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.0c6cdd15.js"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.42b953a5.js"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\js\\main.0c6cdd15.js.LICENSE.txt",
+      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\js\\main.42b953a5.js.LICENSE.txt",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
-      "RelativePath": "static/js/main.0c6cdd15.js.LICENSE.txt",
+      "RelativePath": "static/js/main.42b953a5.js.LICENSE.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -405,15 +405,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.0c6cdd15.js.LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.42b953a5.js.LICENSE.txt"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\js\\main.0c6cdd15.js.map",
+      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\js\\main.42b953a5.js.map",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
-      "RelativePath": "static/js/main.0c6cdd15.js.map",
+      "RelativePath": "static/js/main.42b953a5.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -422,7 +422,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.0c6cdd15.js.map"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.42b953a5.js.map"
     }
   ]
 }
