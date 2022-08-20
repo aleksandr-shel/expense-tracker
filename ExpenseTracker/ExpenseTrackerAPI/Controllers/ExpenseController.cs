@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using AutoMapper.Configuration.Annotations;
 using AutoMapper.QueryableExtensions;
 using ExpenseTrackerAPI.Core;
 using ExpenseTrackerAPI.DTOs;
@@ -151,6 +152,7 @@ namespace ExpenseTrackerAPI.Controllers
             return Ok();
         }
 
+        [NonAction]
         private async Task<Expense> HandleAddExpenseDto(ExpenseDto expenseDto, List<Category> categories)
         {
             var category = categories.Find(x => x.Name.Equals(expenseDto.CategoryName));

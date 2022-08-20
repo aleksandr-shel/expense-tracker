@@ -53,7 +53,7 @@ app.UseCsp(opt =>
     .FormActions(s => s.Self())
     .FrameAncestors(s => s.Self())
     .ImageSources(s => s.Self())
-    .ScriptSources(s => s.Self().CustomSources("https://conoret.com","sha256-kPx0AsF0oz2kKiZ875xSvv693TBHkQ/0SkMJZnnNpnQ="))
+    .ScriptSources(s => s.Self().CustomSources("https://conoret.com","sha256-kPx0AsF0oz2kKiZ875xSvv693TBHkQ/0SkMJZnnNpnQ=", "sha256-wQ8OQ8mjoKgPz1xuAbB/GLjoAHuqPWhqYtN8IfpJAw4="))
 );
 
 if (app.Environment.IsDevelopment())
