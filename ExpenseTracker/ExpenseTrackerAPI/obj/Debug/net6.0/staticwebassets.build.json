@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6HQclv6jlur++bvBPH4fCU21mmwExNmoCnDL6PvsXsc=",
+  "Hash": "w/gh89GdMRvwFsQ++2S6Mp4QnOLlA4KO2PfjKncIll8=",
   "Source": "ExpenseTrackerAPI",
   "BasePath": "_content/ExpenseTrackerAPI",
   "Mode": "Default",
@@ -374,12 +374,12 @@
       "OriginalItemSpec": "wwwroot\\static\\css\\main.e02fa209.css.map"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\js\\main.42b953a5.js",
+      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\js\\main.abb71c6e.js",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
-      "RelativePath": "static/js/main.42b953a5.js",
+      "RelativePath": "static/js/main.abb71c6e.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -388,15 +388,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.42b953a5.js"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.abb71c6e.js"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\js\\main.42b953a5.js.LICENSE.txt",
+      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\js\\main.abb71c6e.js.LICENSE.txt",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
-      "RelativePath": "static/js/main.42b953a5.js.LICENSE.txt",
+      "RelativePath": "static/js/main.abb71c6e.js.LICENSE.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -405,15 +405,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.42b953a5.js.LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.abb71c6e.js.LICENSE.txt"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\js\\main.42b953a5.js.map",
+      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\js\\main.abb71c6e.js.map",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
-      "RelativePath": "static/js/main.42b953a5.js.map",
+      "RelativePath": "static/js/main.abb71c6e.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -422,7 +422,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.42b953a5.js.map"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.abb71c6e.js.map"
     }
   ]
 }

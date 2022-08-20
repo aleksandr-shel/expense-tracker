@@ -41,7 +41,9 @@ const expenseSlice = createSlice({
         deleteExpense:(state, action)=>{
             const id = action.payload;
             state.expenses = state.expenses.filter(ex => ex.id !== id);
-            state.sum = state.expenses.map(x => x.amount).reduce((prev,next)=> prev+next)
+            if (state.expenses.length !== 0){
+                state.sum = state.expenses.map(x => x.amount).reduce((prev,next)=> prev+next)
+            }
         },
         setExpensesForPieChart:(state,action)=>{
             // const tempExpenses = action.payload;
