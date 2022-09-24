@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { openModal } from '../app/store/slices/modalSlice';
 import Login from './Login';
 import Register from './Register';
+import { useNavigate } from 'react-router-dom';
 
 const homePageTheme = createTheme({
     palette:{
@@ -22,6 +23,7 @@ export default function HomePage(){
     const {user} = useSelector(state=>state.usersReducer);
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     return(
         <ThemeProvider theme={homePageTheme}>
@@ -33,14 +35,22 @@ export default function HomePage(){
                     <p style={{color:'white', textAlign:'center'}}>Keep track of your expenses</p>
                     {
                         user === null ?
-                        <Stack direction='row' spacing={'auto'}>
-                            <Button variant='outlined' onClick={()=>dispatch(openModal(<Login/>))}>
-                                Login
-                            </Button>
-                            <Button variant='outlined' onClick={()=>dispatch(openModal(<Register/>))}>
-                                Register
-                            </Button>
-                        </Stack>
+                        <>
+                            <Stack direction='row' spacing={'auto'}>
+                                <Button variant='outlined' onClick={()=>dispatch(openModal(<Login/>))}>
+                                    Login
+                                </Button>
+                                <Button variant='outlined' onClick={()=>dispatch(openModal(<Register/>))}>
+                                    Register
+                                </Button>
+
+                            </Stack>
+                            <Stack style={{marginTop:'1em'}} spacing={'2'}>
+                                <Button variant='outlined' onClick={()=>navigate('/sample-expenses')}>
+                                    Try it now
+                                </Button>
+                            </Stack>
+                        </>
                         :
                         <Stack sx={{marginTop:"1em"}}>
                             <Button component={Link} to='expense-tracker' variant='outlined'>

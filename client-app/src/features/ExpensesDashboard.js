@@ -12,7 +12,7 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 export default function ExpensesDashboard(){
 
     const dispatch = useDispatch();
-    const {expenses} = useSelector(state => state.expenseReducer);
+    const {expenses, sum, expensesForPieChart} = useSelector(state => state.expenseReducer);
     const {user} = useSelector(state => state.usersReducer);
 
     function handleLogout(){
@@ -39,11 +39,11 @@ export default function ExpensesDashboard(){
                 <>
                     <Box sx={{display:'flex', flexWrap:'wrap',marginRight: '5em', marginLeft:'5em'}}>
                         <Box sx={{display:'flex',justifyContent:'center', flex:'1', margin:'1em'}}>
-                            <PieChartComponent/>
+                            <PieChartComponent expensesForPieChart={expensesForPieChart}/>
                         </Box>
                         <Box sx={{flex:'2', margin:'1em'}}>
                             <AddExpenseForm/>
-                            <ListExpenses/>
+                            <ListExpenses expenses={expenses} sum={sum}/>
                         </Box>
                     </Box>
                 </>

@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 import { setToken } from './store/slices/userSlice';
 import { currentUser } from './store/actions/userActions';
 import ExpensesDashboard from '../features/ExpensesDashboard';
+import SampleDashboard from './../features/Sample/SampleDashboard';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
       <ModalComponent/>
       <Routes>
         <Route exact path='/' element={<HomePage/>} />
+        <Route path='/sample-expenses' element={<SampleDashboard/>}/>
         <Route path='/expense-tracker' element={
           <ProtectedRoute>
             <ExpensesDashboard/>

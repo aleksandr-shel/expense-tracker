@@ -1,11 +1,12 @@
-import { Box, Stack, TextField, Button, CircularProgress } from "@mui/material";
+import { Box, Stack, TextField, Button, CircularProgress, Link } from "@mui/material";
 import React, {useState} from "react";
 import { useDispatch } from 'react-redux';
 import { useSelector } from "react-redux";
 import {useNavigate} from 'react-router-dom';
 import agent from './../app/api/agent';
 import {setUser, setToken, setLoading} from '../app/store/slices/userSlice'
-import { closeModal } from "../app/store/slices/modalSlice";
+import { closeModal, openModal } from "../app/store/slices/modalSlice";
+import Login from './Login';
 
 const style = {
     position: 'absolute',
@@ -54,6 +55,7 @@ export default function Register(){
                     <TextField type='text' label="Username" variant="outlined"  value={username} onChange={(e)=>setUsername(e.target.value)}/>
                     <TextField type='password' label="Password" variant="outlined" value={password} onChange={(e)=>setPassword(e.target.value)}/>
                     <Button variant='outlined' type='submit'>{loading ? <CircularProgress /> : <>Register</>}</Button>
+                    <Link style={{margin:'auto', cursor:'pointer'}} onClick={()=>dispatch(openModal(<Login/>))}>Already have an account? Login here</Link>
                 </Stack>
             </form>
         </Box>

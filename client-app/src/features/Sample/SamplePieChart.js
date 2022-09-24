@@ -31,7 +31,7 @@ const renderCustomizedLabel = ({
 };
 
 
-export default function PieChartComponent({expensesForPieChart}){
+export default function SamplePieChart({expensesForPieChart}){
 
 
     return (
