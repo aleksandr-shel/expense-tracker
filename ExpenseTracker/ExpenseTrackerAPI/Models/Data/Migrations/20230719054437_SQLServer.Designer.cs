@@ -3,78 +3,78 @@ using System;
 using ExpenseTrackerAPI.Models.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
 namespace ExpenseTrackerAPI.Models.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220811083313_first")]
-    partial class first
+    [Migration("20230719054437_SQLServer")]
+    partial class SQLServer
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.7")
-                .HasAnnotation("Relational:MaxIdentifierLength", 63);
+                .HasAnnotation("ProductVersion", "6.0.20")
+                .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
             modelBuilder.Entity("ExpenseTrackerAPI.Models.AppUser", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("AccessFailedCount")
-                        .HasColumnType("integer");
+                        .HasColumnType("int");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)
-                        .HasColumnType("character varying(256)");
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("boolean");
+                        .HasColumnType("bit");
 
                     b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("boolean");
+                        .HasColumnType("bit");
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("datetimeoffset");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
-                        .HasColumnType("character varying(256)");
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("NormalizedUserName")
                         .HasMaxLength(256)
-                        .HasColumnType("character varying(256)");
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("PasswordHash")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("boolean");
+                        .HasColumnType("bit");
 
                     b.Property<string>("SecurityStamp")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("boolean");
+                        .HasColumnType("bit");
 
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
-                        .HasColumnType("character varying(256)");
+                        .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
 
@@ -83,7 +83,8 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
 
                     b.HasIndex("NormalizedUserName")
                         .IsUnique()
-                        .HasDatabaseName("UserNameIndex");
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
                 });
@@ -92,13 +93,13 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -107,67 +108,67 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("ee8da59d-9ee7-4a66-855d-f5c4769a8bd6"),
+                            Id = new Guid("abc2a925-9c5d-45c5-9f8d-77bacebf7a22"),
                             Description = "Groceries/Baby Needs/Cosmetics/Personal Care",
                             Name = "Food"
                         },
                         new
                         {
-                            Id = new Guid("55a0f547-97f4-45b0-bfad-c431c5210edf"),
+                            Id = new Guid("fd17f8cc-4ee9-4544-a63c-93830b429db0"),
                             Description = "Cosmetics/Personal Care",
                             Name = "Personal Care"
                         },
                         new
                         {
-                            Id = new Guid("3df2af89-8d74-4107-a4ad-c10ac93b5c0f"),
+                            Id = new Guid("d4b26c0c-83a6-461a-bde1-4507e1c36fb1"),
                             Description = "Clothes",
                             Name = "Clothing"
                         },
                         new
                         {
-                            Id = new Guid("9186b8b0-eb67-4371-975d-01b4e780aa07"),
+                            Id = new Guid("57469ce6-e629-4c0a-bb01-6b1d5761bb65"),
                             Description = "Bus/Taxi/Fuel/Insurance/Maintenance/Parking",
                             Name = "Transportation"
                         },
                         new
                         {
-                            Id = new Guid("f22d9774-60b0-4eef-927f-2c65d15aff9a"),
+                            Id = new Guid("abdd93da-705f-41b9-ba33-9e481ca414d5"),
                             Description = "Mortgage/Taxes/Rent/Insurance",
                             Name = "Housing"
                         },
                         new
                         {
-                            Id = new Guid("211ef3ee-5049-49d0-9396-4311060448eb"),
+                            Id = new Guid("1f2ea74b-46df-4b64-b2aa-02e3d0bf9e65"),
                             Description = "Phone/Cell phone/Gas/Cable/Internet/Hydro",
                             Name = "Utilities"
                         },
                         new
                         {
-                            Id = new Guid("76c9ae64-0bd4-401d-9e3f-5d7f6d30e4f4"),
+                            Id = new Guid("00311899-36f3-4219-a146-bd9d3ae948b1"),
                             Description = "Health care premiums/Specialists/Over-the-counter",
                             Name = "Medical"
                         },
                         new
                         {
-                            Id = new Guid("eae1205f-34a6-4bdd-8faf-edd45cb67722"),
+                            Id = new Guid("54945f40-a803-4bbb-8a48-eb389bc3927f"),
                             Description = "School/Courses/Training/College/University",
                             Name = "Education"
                         },
                         new
                         {
-                            Id = new Guid("71b5aa6a-5949-4ad0-8296-56e77e690369"),
+                            Id = new Guid("4fd5c000-d089-4caf-90f5-2c9e5cbd5913"),
                             Description = "Gaming/Cinema/Attractions/Museums/Restaurants/Cafe",
                             Name = "Entertainment"
                         },
                         new
                         {
-                            Id = new Guid("7080edb7-65c5-4cf1-9953-f3ceef405daf"),
+                            Id = new Guid("ccf7afd6-d0c0-464d-ab92-3787adeb3580"),
                             Description = "Netflix/Disney Plus/Amazon Prime/Youtube Premium/Gaming Subscriptions/etc",
                             Name = "Subscriptions"
                         },
                         new
                         {
-                            Id = new Guid("bc603765-acd5-4a47-83ec-67b6cdc1844e"),
+                            Id = new Guid("8b4085c6-9014-493e-b719-2913cfaee754"),
                             Description = "Uncategorized",
                             Name = "Other"
                         });
@@ -177,22 +178,22 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<double>("Amount")
-                        .HasColumnType("double precision");
+                        .HasColumnType("float");
 
                     b.Property<Guid?>("CategoryId")
-                        .HasColumnType("uuid");
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("Date")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
@@ -206,25 +207,26 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .HasMaxLength(256)
-                        .HasColumnType("character varying(256)");
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("NormalizedName")
                         .HasMaxLength(256)
-                        .HasColumnType("character varying(256)");
+                        .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedName")
                         .IsUnique()
-                        .HasDatabaseName("RoleNameIndex");
+                        .HasDatabaseName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
                 });
@@ -233,19 +235,19 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("int");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ClaimType")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ClaimValue")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RoleId")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
@@ -258,19 +260,19 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("int");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ClaimType")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ClaimValue")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
@@ -282,17 +284,17 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderKey")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderDisplayName")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("LoginProvider", "ProviderKey");
 
@@ -304,10 +306,10 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("RoleId")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("UserId", "RoleId");
 
@@ -319,16 +321,16 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Value")
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nhcxM7NZQ17Y3/Uho05sJNvxvLNqHqCifOO4A8B8Yeo=",
+  "Hash": "XYafH3SgUVoj/PcZLSdrNvvK++H/smkcZ1dKcaBxGQw=",
   "Source": "ExpenseTrackerAPI",
   "BasePath": "_content/ExpenseTrackerAPI",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ExpenseTrackerAPI\\wwwroot",
       "Source": "ExpenseTrackerAPI",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\asset-manifest.json",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\asset-manifest.json",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "asset-manifest.json",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\asset-manifest.json"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\favicon.ico",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\icon.png",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\icon.png",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "icon.png",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\icon.png"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Clothing.jpg",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Clothing.jpg",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "images/categories/Clothing.jpg",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\Clothing.jpg"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Education.jpg",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Education.jpg",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "images/categories/Education.jpg",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\Education.jpg"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Entertainment.jpg",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Entertainment.jpg",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "images/categories/Entertainment.jpg",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\Entertainment.jpg"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Food.jpg",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Food.jpg",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "images/categories/Food.jpg",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\Food.jpg"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Housing.jpg",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Housing.jpg",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "images/categories/Housing.jpg",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\Housing.jpg"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Medical.jpg",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Medical.jpg",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "images/categories/Medical.jpg",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\Medical.jpg"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Other.jpg",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Other.jpg",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "images/categories/Other.jpg",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\Other.jpg"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Personal Care.jpg",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Personal Care.jpg",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "images/categories/Personal Care.jpg",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\Personal Care.jpg"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Subscriptions.jpg",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Subscriptions.jpg",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "images/categories/Subscriptions.jpg",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\Subscriptions.jpg"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Transportation.jpg",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Transportation.jpg",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "images/categories/Transportation.jpg",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\Transportation.jpg"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Utilities.jpg",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\images\\categories\\Utilities.jpg",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "images/categories/Utilities.jpg",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\Utilities.jpg"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\index.html",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\index.html",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\logo192.png",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\logo192.png",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "logo192.png",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\logo192.png"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\logo512.png",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\logo512.png",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "logo512.png",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\logo512.png"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\manifest.json",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\manifest.json",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "manifest.json",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\manifest.json"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\robots.txt",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\robots.txt",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "robots.txt",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\robots.txt"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\css\\main.e02fa209.css",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\css\\main.e02fa209.css",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "static/css/main.e02fa209.css",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\static\\css\\main.e02fa209.css"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\css\\main.e02fa209.css.map",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\css\\main.e02fa209.css.map",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "static/css/main.e02fa209.css.map",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\static\\css\\main.e02fa209.css.map"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\js\\main.71c8d06e.js",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\js\\main.71c8d06e.js",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "static/js/main.71c8d06e.js",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\main.71c8d06e.js"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\js\\main.71c8d06e.js.LICENSE.txt",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\js\\main.71c8d06e.js.LICENSE.txt",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "static/js/main.71c8d06e.js.LICENSE.txt",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\main.71c8d06e.js.LICENSE.txt"
     },
     {
-      "Identity": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\js\\main.71c8d06e.js.map",
+      "Identity": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\static\\js\\main.71c8d06e.js.map",
       "SourceId": "ExpenseTrackerAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Web Development Projects\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Web Development\\expense-tracker\\ExpenseTracker\\ExpenseTrackerAPI\\wwwroot\\",
       "BasePath": "_content/ExpenseTrackerAPI",
       "RelativePath": "static/js/main.71c8d06e.js.map",
       "AssetKind": "All",

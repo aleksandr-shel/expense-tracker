@@ -1,12 +1,11 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
 namespace ExpenseTrackerAPI.Models.Data.Migrations
 {
-    public partial class first : Migration
+    public partial class SQLServer : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,10 +13,10 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
                 name: "AspNetRoles",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "text", nullable: false),
-                    Name = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
-                    NormalizedName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
-                    ConcurrencyStamp = table.Column<string>(type: "text", nullable: true)
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
+                    NormalizedName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
+                    ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -28,21 +27,21 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
                 name: "AspNetUsers",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "text", nullable: false),
-                    UserName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
-                    NormalizedUserName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
-                    Email = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
-                    NormalizedEmail = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
-                    EmailConfirmed = table.Column<bool>(type: "boolean", nullable: false),
-                    PasswordHash = table.Column<string>(type: "text", nullable: true),
-                    SecurityStamp = table.Column<string>(type: "text", nullable: true),
-                    ConcurrencyStamp = table.Column<string>(type: "text", nullable: true),
-                    PhoneNumber = table.Column<string>(type: "text", nullable: true),
-                    PhoneNumberConfirmed = table.Column<bool>(type: "boolean", nullable: false),
-                    TwoFactorEnabled = table.Column<bool>(type: "boolean", nullable: false),
-                    LockoutEnd = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: true),
-                    LockoutEnabled = table.Column<bool>(type: "boolean", nullable: false),
-                    AccessFailedCount = table.Column<int>(type: "integer", nullable: false)
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
+                    NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
+                    NormalizedEmail = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
+                    EmailConfirmed = table.Column<bool>(type: "bit", nullable: false),
+                    PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SecurityStamp = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PhoneNumberConfirmed = table.Column<bool>(type: "bit", nullable: false),
+                    TwoFactorEnabled = table.Column<bool>(type: "bit", nullable: false),
+                    LockoutEnd = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
+                    LockoutEnabled = table.Column<bool>(type: "bit", nullable: false),
+                    AccessFailedCount = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -53,9 +52,9 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
                 name: "Categories",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Name = table.Column<string>(type: "text", nullable: true),
-                    Description = table.Column<string>(type: "text", nullable: true)
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -66,11 +65,11 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    RoleId = table.Column<string>(type: "text", nullable: false),
-                    ClaimType = table.Column<string>(type: "text", nullable: true),
-                    ClaimValue = table.Column<string>(type: "text", nullable: true)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    RoleId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ClaimType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ClaimValue = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -87,11 +86,11 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
                 name: "AspNetUserClaims",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    UserId = table.Column<string>(type: "text", nullable: false),
-                    ClaimType = table.Column<string>(type: "text", nullable: true),
-                    ClaimValue = table.Column<string>(type: "text", nullable: true)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ClaimType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ClaimValue = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -108,10 +107,10 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
                 name: "AspNetUserLogins",
                 columns: table => new
                 {
-                    LoginProvider = table.Column<string>(type: "text", nullable: false),
-                    ProviderKey = table.Column<string>(type: "text", nullable: false),
-                    ProviderDisplayName = table.Column<string>(type: "text", nullable: true),
-                    UserId = table.Column<string>(type: "text", nullable: false)
+                    LoginProvider = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ProviderKey = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ProviderDisplayName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -128,8 +127,8 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
                 name: "AspNetUserRoles",
                 columns: table => new
                 {
-                    UserId = table.Column<string>(type: "text", nullable: false),
-                    RoleId = table.Column<string>(type: "text", nullable: false)
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    RoleId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -152,10 +151,10 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
                 name: "AspNetUserTokens",
                 columns: table => new
                 {
-                    UserId = table.Column<string>(type: "text", nullable: false),
-                    LoginProvider = table.Column<string>(type: "text", nullable: false),
-                    Name = table.Column<string>(type: "text", nullable: false),
-                    Value = table.Column<string>(type: "text", nullable: true)
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    LoginProvider = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Value = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -172,12 +171,12 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
                 name: "Expenses",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Name = table.Column<string>(type: "text", nullable: true),
-                    CategoryId = table.Column<Guid>(type: "uuid", nullable: true),
-                    Amount = table.Column<double>(type: "double precision", nullable: false),
-                    Date = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    UserId = table.Column<string>(type: "text", nullable: true)
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CategoryId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    Amount = table.Column<double>(type: "float", nullable: false),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -199,17 +198,17 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
                 columns: new[] { "Id", "Description", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("211ef3ee-5049-49d0-9396-4311060448eb"), "Phone/Cell phone/Gas/Cable/Internet/Hydro", "Utilities" },
-                    { new Guid("3df2af89-8d74-4107-a4ad-c10ac93b5c0f"), "Clothes", "Clothing" },
-                    { new Guid("55a0f547-97f4-45b0-bfad-c431c5210edf"), "Cosmetics/Personal Care", "Personal Care" },
-                    { new Guid("7080edb7-65c5-4cf1-9953-f3ceef405daf"), "Netflix/Disney Plus/Amazon Prime/Youtube Premium/Gaming Subscriptions/etc", "Subscriptions" },
-                    { new Guid("71b5aa6a-5949-4ad0-8296-56e77e690369"), "Gaming/Cinema/Attractions/Museums/Restaurants/Cafe", "Entertainment" },
-                    { new Guid("76c9ae64-0bd4-401d-9e3f-5d7f6d30e4f4"), "Health care premiums/Specialists/Over-the-counter", "Medical" },
-                    { new Guid("9186b8b0-eb67-4371-975d-01b4e780aa07"), "Bus/Taxi/Fuel/Insurance/Maintenance/Parking", "Transportation" },
-                    { new Guid("bc603765-acd5-4a47-83ec-67b6cdc1844e"), "Uncategorized", "Other" },
-                    { new Guid("eae1205f-34a6-4bdd-8faf-edd45cb67722"), "School/Courses/Training/College/University", "Education" },
-                    { new Guid("ee8da59d-9ee7-4a66-855d-f5c4769a8bd6"), "Groceries/Baby Needs/Cosmetics/Personal Care", "Food" },
-                    { new Guid("f22d9774-60b0-4eef-927f-2c65d15aff9a"), "Mortgage/Taxes/Rent/Insurance", "Housing" }
+                    { new Guid("00311899-36f3-4219-a146-bd9d3ae948b1"), "Health care premiums/Specialists/Over-the-counter", "Medical" },
+                    { new Guid("1f2ea74b-46df-4b64-b2aa-02e3d0bf9e65"), "Phone/Cell phone/Gas/Cable/Internet/Hydro", "Utilities" },
+                    { new Guid("4fd5c000-d089-4caf-90f5-2c9e5cbd5913"), "Gaming/Cinema/Attractions/Museums/Restaurants/Cafe", "Entertainment" },
+                    { new Guid("54945f40-a803-4bbb-8a48-eb389bc3927f"), "School/Courses/Training/College/University", "Education" },
+                    { new Guid("57469ce6-e629-4c0a-bb01-6b1d5761bb65"), "Bus/Taxi/Fuel/Insurance/Maintenance/Parking", "Transportation" },
+                    { new Guid("8b4085c6-9014-493e-b719-2913cfaee754"), "Uncategorized", "Other" },
+                    { new Guid("abc2a925-9c5d-45c5-9f8d-77bacebf7a22"), "Groceries/Baby Needs/Cosmetics/Personal Care", "Food" },
+                    { new Guid("abdd93da-705f-41b9-ba33-9e481ca414d5"), "Mortgage/Taxes/Rent/Insurance", "Housing" },
+                    { new Guid("ccf7afd6-d0c0-464d-ab92-3787adeb3580"), "Netflix/Disney Plus/Amazon Prime/Youtube Premium/Gaming Subscriptions/etc", "Subscriptions" },
+                    { new Guid("d4b26c0c-83a6-461a-bde1-4507e1c36fb1"), "Clothes", "Clothing" },
+                    { new Guid("fd17f8cc-4ee9-4544-a63c-93830b429db0"), "Cosmetics/Personal Care", "Personal Care" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -221,7 +220,8 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
                 name: "RoleNameIndex",
                 table: "AspNetRoles",
                 column: "NormalizedName",
-                unique: true);
+                unique: true,
+                filter: "[NormalizedName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetUserClaims_UserId",
@@ -247,7 +247,8 @@ namespace ExpenseTrackerAPI.Models.Data.Migrations
                 name: "UserNameIndex",
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
-                unique: true);
+                unique: true,
+                filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Expenses_CategoryId",
